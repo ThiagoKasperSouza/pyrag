@@ -1,5 +1,49 @@
 # Guia rapido
 
+## 0. Antes de tudo: ativar o ambiente
+
+O comando `pyrag` vive **dentro do venv**. Se ele nao esta ativo, o bash responde
+`pyrag: command not found`. Ha tres formas de resolver:
+
+**A) Ativar manualmente (qualquer diretorio):**
+
+```bash
+source /home/thiag/pyrag/.venv/bin/activate
+```
+
+O prompt passa a mostrar `(.venv)`. Para desativar: `deactivate`.
+
+**B) Automatica (ja configurada no seu `~/.bashrc`):**
+
+Ao entrar em `/home/thiag/pyrag`, o venv e ativado sozinho. Basta:
+
+```bash
+cd /home/thiag/pyrag
+pyrag rag ask "sua pergunta"
+```
+
+O `(.venv)` no prompt confirma que deu certo. As linhas ficam no final do `.bashrc`,
+entre comentarios `# pyrag: ativa o venv ...` — basta apagar esse bloco para
+desativar o comportamento.
+
+**C) Sem ativar nada (um comando pontual):**
+
+```bash
+/home/thiag/pyrag/.venv/bin/pyrag rag ask "sua pergunta"
+# ou, de dentro do projeto:
+./.venv/bin/pyrag rag ask "sua pergunta"
+```
+
+**D) Como modulo Python** (funciona sempre, sem venv ativado):
+
+```bash
+cd /home/thiag/pyrag
+.venv/bin/python -m pyrag rag ask "sua pergunta"
+```
+
+Diagnostico rapido: `which pyrag` deve retornar
+`/home/thiag/pyrag/.venv/bin/pyrag`. Se retornar vazio, o venv nao esta ativo.
+
 ## 1. Requisitos
 
 - Python 3.10+ (testado em 3.12)
