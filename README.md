@@ -1,5 +1,8 @@
 # pyrag — visão geral do sistema
 
+<img width="842" height="191" alt="image" src="https://github.com/user-attachments/assets/4ef1866a-5c62-4392-a795-52f5ff5c4ec3" />
+
+
 pyrag e um sistema RAG completo, 100% local por padrao, com LLMs gratuitos.
 
 ## Camadas
